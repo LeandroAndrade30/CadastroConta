@@ -5,7 +5,7 @@ namespace CadastroConta
 
 
 {
-     public  class ContaBancaria
+    public class ContaBancaria
     {
         public string Titular;
         public double Saldo;
@@ -55,15 +55,19 @@ namespace CadastroConta
             contaJoao.Depositar(500);
             contaJoao.Sacar(200);
             contaJoao.ExibirSaldo();
-             
-            // criando a conta da Maria
+
+            // Criando uma nova conta bancária para Maria 
             ContaBancaria contaMaria = new ContaBancaria("Maria", 2000);
-            contaMaria.Depositar(300); 
+            // Efetuando a transferência da conta da maria
+            contaMaria.Sacar(300);
             contaJoao.Depositar(300);
+
+            // Exibindo os saldos atualizados das contas 
             contaJoao.ExibirSaldo();
             contaMaria.ExibirSaldo();
-
 
         }
     }
 }
+
+
